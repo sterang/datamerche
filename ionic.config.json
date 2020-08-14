@@ -1,0 +1,7 @@
+{
+  "name": "myAmplifyProject",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
