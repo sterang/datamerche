@@ -1,0 +1,37 @@
+<app-header></app-header>
+<ion-content>
+  <div class="container" *ngIf="productos">
+    <div class="row">
+      <div>
+        <div class="logo">
+          <img [src]="productos.datos.image" alt="">
+        </div>
+        <div class="redondearImg">
+          <img [src]="productos.datos.image" alt="">
+        </div>
+        <div class="redondearImg">
+          <h4> <strong> {{productos.datos.name}} </strong> </h4>
+        </div>
+        <div class="redondearImgSeguir">
+          <ion-button *ngIf="favorito===false" (click)="seguir()">Follow</ion-button>
+          <ion-button *ngIf="favorito===true" (click)="dejarSeguir()">Unfollow</ion-button>
+        </div>
+        <div class="relativo">
+          <p>Content</p>
+          <hr>
+        </div>
+      </div>
+      <div>
+        <ion-list>
+          <ion-item *ngFor="let item of productos.datos.contenido" [href]="item.url">
+            <div>
+              <ion-text>
+                <p style="margin-bottom: 0.1em;"> {{item.name}} </p>
+              </ion-text>
+            </div>
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+  </div>
+</ion-content>

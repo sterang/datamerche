@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div class="bar">
+      <ion-title> <strong> Register </strong></ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <div class="row">
+      <div>
+        <div class="logo">
+          <img src="../../assets/logo.png" alt="">
+        </div>
+        <ion-card>
+          <ion-card-header>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-label>Username:</ion-label>
+            <ion-input placeholder="Username" [(ngModel)]="username"></ion-input>
+            <ion-label>Email:</ion-label>
+            <ion-input placeholder="Email" [(ngModel)]="email"></ion-input>
+            <ion-label>Password:</ion-label>
+            <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+          </ion-card-content>
+        </ion-card>
+      </div>
+      <div class="btnSesion">
+        <ion-button shape="round" (click)="signUp()">Registrate</ion-button>
+        <ion-button shape="round" (click)="retorna()">Retorna</ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div class="bar">
+      <ion-title> <strong> Code Validation </strong></ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="container">
+    <div class="row">
+      <div>
+        <ion-card>
+          <ion-card-header>
+            <ion-label>Ingrese el codigo que ha sido enviado a su correo</ion-label>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-label>Code:</ion-label>
+            <ion-input placeholder="Enter yout code" [(ngModel)]="code"></ion-input>
+          </ion-card-content>
+        </ion-card>
+      </div>
+      <div class="btnSesion">
+        <ion-button shape="round" (click)="confirmSignUp()">Confirmar Code</ion-button>
+
+      </div>
+      <div class="btnSesion">
+        <ion-button shape="round" (click)="resendCode()">Re envia Code</ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,20 +1,37 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="figure"></div>
+  <div class="figure2"></div>
+  <div class="container">
+    <div class="row">
+      <ion-toolbar>
+        <div class="bar">
+          <ion-title> <strong> Academ </strong></ion-title>
+        </div>
+      </ion-toolbar>
+      <div>
+        <div class="logo">
+          <img src="../../assets/logo.png" alt="">
+        </div>
+        <ion-card>
+          <ion-card-header>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-label>Username:</ion-label>
+            <ion-input placeholder="Username" [(ngModel)]="username"></ion-input>
+            <ion-label>Password:</ion-label>
+            <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+            <a (click)="forgetPass()">Olvidaste contraseña</a>
+          </ion-card-content>
+          <div class="btnSesion">
+            <ion-button shape="round" (click)="signIn()">Log In</ion-button>
+          </div>
+          <div class="btnSesion">
+            <ion-button shape="round" (click)="register()">Sing Up</ion-button>
+          </div>
+        </ion-card>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+      </div>
+
+    </div>
   </div>
 </ion-content>

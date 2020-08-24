@@ -1,7 +1,8 @@
 {
   "name": "myAmplifyProject",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }
