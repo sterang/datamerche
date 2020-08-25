@@ -39,8 +39,8 @@ export class RegisterPage implements OnInit {
             email
           }
         }).then((user) => {
-          console.log(user)
-          console.log("Entro");
+          //console.log(user)
+          //console.log("Entro");
           this.router.navigate(['validation', this.username]);
         }).catch(async (err) => {
           console.log(err)
@@ -61,7 +61,7 @@ export class RegisterPage implements OnInit {
       }
 
     } catch (error) {
-      console.log('error signing up', error)
+      //console.log('error signing up', error)
     }
   }
 

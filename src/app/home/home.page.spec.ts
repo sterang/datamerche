@@ -4,9 +4,10 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { HomePage } from './home.page';
 import { CommonModule } from '@angular/common';
-import { Auth } from 'aws-amplify';
+//import { Auth } from 'aws-amplify';
 import { FormBuilder, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { MockStore } from '@ngrx/store/testing';
+import { Auth } from 'aws-amplify';
 const loginSevice = {
   login(username: string, password: string) {
     const userData = {
@@ -48,14 +49,29 @@ describe('HomePage', () => {
     it('should have as username, password variables', () => {
       const app = fixture.debugElement.componentInstance;
       expect(app.username).toEqual('');
+      expect(app.password).toEqual('');
     });
     it('should change router', () => {
-      const app = fixture.debugElement.componentInstance;
       component.password = '12345';
       component.username = 'hamil';
-      //component.signIn();
-      expect(component.signIn()).toHaveBeenCalled();
+      spyOn(component, 'signIn');
+      fixture.whenStable().then(() => {
+        expect(component.signIn()).toHaveBeenCalled();
+      })
     });
+    it('should change register', () => {
+      spyOn(component, 'register');
+      fixture.whenStable().then(() => {
+        expect(component.register()).toHaveBeenCalled();
+      })
+    });
+    it('should change forget', () => {
+      spyOn(component, 'forgetPass');
+      fixture.whenStable().then(() => {
+        expect(component.forgetPass()).toHaveBeenCalled();
+      })
+    });
+
   });
 
 
